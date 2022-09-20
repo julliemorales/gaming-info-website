@@ -1,20 +1,20 @@
-import './App.css';
-import AllGames from './components/AllGames';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import News from './components/News';
+import "./App.css";
+import AllGames from "./components/AllGames";
+import Hero from "./components/Hero";
+import News from "./components/News";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
-	return (
-		<div className='App'>
-			<Navbar />
-			<Hero />
-			<AllGames />
-			<News />
-			<Footer />
-		</div>
-	);
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/games" element={<AllGames />} />
+        <Route path="/news" element={<News />} />
+        <Route path="*" element={<>PageNotFound</>} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;

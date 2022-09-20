@@ -39,5 +39,10 @@
   "description": "Our Mini-Project 2 at KodeGo Bootcamp 2022",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.11",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
 }
