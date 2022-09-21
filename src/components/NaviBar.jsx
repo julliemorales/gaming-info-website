@@ -75,6 +75,18 @@ const NaviBar = (props) => {
               </li>
               <li>
                 <Link
+                  to="/about"
+                  className={`${
+                    props.title === "About"
+                      ? "text-white"
+                      : "text-red-500 hover:text-white"
+                  }`}
+                >
+                  ABOUT
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/games"
                   className={`${
                     props.title === "Games"

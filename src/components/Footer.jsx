@@ -26,6 +26,18 @@ const Footer = (props) => {
             </li>
             <li className="px-10">
               <Link
+                to="/about"
+                className={`${
+                  props.title === "About"
+                    ? "text-white"
+                    : "text-red-500 hover:text-white"
+                }`}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li className="px-10">
+              <Link
                 to="/games"
                 className={`${
                   props.title === "Games"

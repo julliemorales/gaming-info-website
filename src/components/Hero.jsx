@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import LatestGames from "./LatestGames";
 import NaviBar from "./NaviBar";
 import { Link } from "react-router-dom";
+import LatestNews from "./LatestNews";
 
 const Hero = () => {
   return (
@@ -113,7 +114,12 @@ const Hero = () => {
         </div>
       </div>
       <div className="bg-[#291D24]">
-        <LatestGames />
+        <div>
+          <LatestGames />
+        </div>
+        <div>
+          <LatestNews />
+        </div>
       </div>
       <Footer title="Home" />
     </div>

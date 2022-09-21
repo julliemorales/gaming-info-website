@@ -86,9 +86,9 @@ const LatestGames = () => {
       <div>
         <Carousel>
           {data &&
-            data.map((item) => {
+            data.map((item, index) => {
               return (
-                <div className="xl:w-1/4 md:w-1/2 p-4">
+                <div className="xl:w-1/4 md:w-1/2 p-4" key={index}>
                   <div className="bg-[#201B1B] rounded-lg">
                     <img
                       className="h-40 w-full object-cover object-center mb-6"
@@ -106,7 +106,7 @@ const LatestGames = () => {
                         </span>
                       </h2>
                       <div className="flex justify-end">
-                        <button class="nunito px-4 py-1 bg-[#747474] text-white text-sm rounded-full">
+                        <button className="nunito px-4 py-1 bg-[#747474] text-white text-sm rounded-full">
                           {item.genre}
                         </button>
                       </div>
