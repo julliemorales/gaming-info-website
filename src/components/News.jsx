@@ -1,11 +1,13 @@
 import React from "react";
-import Navbar from "./Navbar";
+import NaviBar from "./NaviBar";
+import Footer from "./Footer";
 
 const News = () => {
   return (
     <div>
-      <Navbar title="News" />
+      <NaviBar title="News" />
       <h1>News Section</h1>
+      <Footer title="News" />
     </div>
   );
 };

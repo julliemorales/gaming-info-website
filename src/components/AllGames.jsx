@@ -1,11 +1,13 @@
+import Footer from "./Footer";
 import React from "react";
-import Navbar from "./Navbar";
+import NaviBar from "./NaviBar";
 
 const AllGames = () => {
   return (
     <div>
-      <Navbar title="Games" />
+      <NaviBar title="Games" />
       <h1>All Games Section</h1>
+      <Footer title="Games" />
     </div>
   );
 };
