@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/games" element={<AllGames />} />
-        <Route path="/singlegame" element={<SinglePage />} />
+        <Route path="/games/:id" element={<SinglePage />} />
         <Route path="/news" element={<News />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
