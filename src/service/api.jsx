@@ -1,22 +1,21 @@
-import axios from "axios";
+import axios from 'axios';
 
-const freeToPlayGamesAPI =
-  "https://free-to-play-games-database.p.rapidapi.com/api";
+const freeToPlayGamesAPI = process.env.REACT_APP_API_URL;
 
 const gamesList = {
-  method: "GET",
+  method: 'GET',
   headers: {
-    "X-RapidAPI-Key": "995c1fcf9bmsh20b433c8668b7acp1e5df8jsnceb32395cd66",
-    "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
+    'X-RapidAPI-Key': process.env.REACT_APP_X_RAPID_API_KEY,
+    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
   },
 };
 
 const newsList = {
-  method: "GET",
-  url: "https://videogames-news2.p.rapidapi.com/videogames_news/recent",
+  method: 'GET',
+  url: 'https://videogames-news2.p.rapidapi.com/videogames_news/recent',
   headers: {
-    "X-RapidAPI-Key": "3f9f6e3914msh2dbc136ebe0cf90p1c66f9jsn71e8a032909b",
-    "X-RapidAPI-Host": "videogames-news2.p.rapidapi.com",
+    'X-RapidAPI-Key': process.env.REACT_APP_X_RAPID_API_KEY,
+    'X-RapidAPI-Host': 'videogames-news2.p.rapidapi.com',
   },
 };
 
@@ -26,7 +25,7 @@ export const getAllGames = async (category) => {
   return await axios.request({
     ...gamesList,
     url: `${freeToPlayGamesAPI}/games`,
-    params: { "sort-by": "release-date", category },
+    params: { 'sort-by': 'release-date', category },
   });
 };
 
