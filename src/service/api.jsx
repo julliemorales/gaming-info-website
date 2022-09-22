@@ -22,11 +22,11 @@ const newsList = {
 
 // const baseUrl = "https://www.freetogame.com/api";
 
-export const getAllGames = async () => {
+export const getAllGames = async (category) => {
   return await axios.request({
     ...gamesList,
     url: `${freeToPlayGamesAPI}/games`,
-    params: { "sort-by": "release-date" },
+    params: { "sort-by": "release-date", category },
   });
 };
 
@@ -34,7 +34,7 @@ export const getSingleGame = async (id) => {
   return await axios.request({
     ...gamesList,
     url: `${freeToPlayGamesAPI}/game`,
-    params: { id: id },
+    params: { id },
   });
 };
 

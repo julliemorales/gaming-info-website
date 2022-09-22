@@ -45,7 +45,7 @@ const AllNews = () => {
 
               return (
                 <div
-                  className="flex flex-col lg:flex-row shadow-lg w-[100%] lg:h-[250px]"
+                  className="flex flex-col lg:flex-row shadow-lg w-[100%] lg:min-h-[250px]"
                   key={index}
                 >
                   <div>
@@ -72,7 +72,7 @@ const AllNews = () => {
                     </div>
                     <div className="mb-2">
                       <p>
-                        <span className="nunito text-lg px-2">
+                        <span className="nunito font-thin text-lg px-2">
                           {description}
                         </span>
                       </p>
