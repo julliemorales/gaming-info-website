@@ -27,7 +27,7 @@ const AllNews = () => {
     <div className='bg-[#291D24]'>
       <NaviBar title='News' />
       <div className='container mx-auto px-5 pb-40'>
-        <h5 className='halant text-5xl text-left font-bold text-white my-10'>
+        <h5 className='halant text-[#DC3D4B] underline text-5xl text-center lg:text-start font-bold text-white my-10'>
           LATEST NEWS
         </h5>
         {isLoading && (
@@ -49,14 +49,10 @@ const AllNews = () => {
                   className='flex flex-col lg:flex-row shadow-lg w-[100%] lg:min-h-[250px]'
                   key={index}
                 >
-                  <div>
-                    <img
-                      className='min-w-[500px] max-w-[500px] max-h-[250px]'
-                      src={image}
-                      alt={title}
-                    />
+                  <div className='lg:w-2/5 lg:flex lg:items-center'>
+                    <img className='mx-auto' src={image} alt={title} />
                   </div>
-                  <div className='p-3'>
+                  <div className='p-3 lg:pt-0 lg:w-3/5 text-center lg:text-start'>
                     <div className='mb-2'>
                       <h3 className='font-bold text-xl uppercase underline tracking-wide'>
                         <a href={link} target='_blank' rel='noreferrer'>
@@ -73,7 +69,7 @@ const AllNews = () => {
                     </div>
                     <div className='mb-2'>
                       <p>
-                        <span className='nunito font-thin text-lg px-2'>
+                        <span className='nunito font-thin text-lg lg:text-base px-2'>
                           {description}
                         </span>
                       </p>

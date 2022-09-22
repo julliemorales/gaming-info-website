@@ -22,8 +22,8 @@ const AllNews = () => {
 
   return (
     <div className='bg-[#261F1F]'>
-      <div className='container mx-auto'>
-        <h5 className=' halant text-6xl text-center text-white my-20 underline'>
+      <div className='container mx-auto px-5'>
+        <h5 className=' halant text-6xl font-bold text-center text-white my-20 underline'>
           LATEST NEWS
         </h5>
         {isLoading && (
@@ -39,19 +39,17 @@ const AllNews = () => {
 
               return (
                 <div
-                  className={`flex flex-col lg:flex-row shadow-lg w-[100%] py-5
+                  className={`flex flex-col lg:flex-row shadow-lg w-[100%] py-5 lg:min-h-[250px]
 				      ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
                   key={index}
                 >
-                  <div>
-                    <img
-                      className='min-w-[500px] max-w-[500px] max-h-[250px]'
-                      src={image}
-                      alt={title}
-                    />
+                  <div className='lg:w-2/5 lg:flex lg:items-center'>
+                    <img className='mx-auto' src={image} alt={title} />
                   </div>
                   <div
-                    className={`p-3 ${index % 2 !== 0 ? 'lg:text-right' : ''}`}
+                    className={`p-3 lg:pt-0 lg:w-3/5 text-center lg:text-start ${
+                      index % 2 !== 0 ? 'lg:text-end' : ''
+                    }`}
                   >
                     <div className='mb-2'>
                       <h3 className='font-bold text-xl uppercase underline tracking-wide'>

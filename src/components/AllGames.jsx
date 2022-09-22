@@ -37,8 +37,8 @@ const AllGames = () => {
     <div className='bg-[#291D24]'>
       <NaviBar title='Games' />
       <div className='container mx-auto px-5 pb-40'>
-        <div className='flex justify-between items-center'>
-          <h1 className='halant text-3xl md:text-4xl lg:text-5xl font-bold text-white my-10'>
+        <div className='flex flex-col md:flex-row justify-between items-center pb-10'>
+          <h1 className='halant text-center md:text-start text-3xl md:text-4xl lg:text-5xl font-bold text-white my-10'>
             EXPLORE THE BEST{' '}
             <span className='block'>
               <span className='text-[#DC3D4B]'>FREE GAMES</span> TODAY
