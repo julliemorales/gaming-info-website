@@ -9,7 +9,7 @@ const NaviBar = (props) => {
       <div className='justify-between px-4 md:items-center md:flex md:px-16'>
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-            <Link>
+            <Link to='/'>
               <img
                 className='h-16 md:h-22'
                 src='/img/logo.svg'

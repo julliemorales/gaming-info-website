@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Carousel from './Carousel';
 import { Link } from 'react-router-dom';
 import { getAllGames } from '../service/api';
+import AOS from 'aos';
 
 const AllGames = () => {
   const [games, setGames] = useState([]);
@@ -19,17 +20,18 @@ const AllGames = () => {
 
   useEffect(() => {
     getGamesList();
+    AOS.init();
   }, []);
 
   return (
-    <div className='container mx-auto py-20 px-10'>
-      <div>
+    <div className='container mx-auto py-20 px-5'>
+      <div data-aos='fade-right' data-aos-duration='800'>
         <p className='nunito text-xl text-white'>Latest Game Releases</p>
         <p className='halant text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-3'>
           TOP NEW GAMES RELEASED <span className='text-[#DC3D4B]'>2022</span>
         </p>
       </div>
-      <div>
+      <div data-aos='fade-up' data-aos-duration='800'>
         <Carousel>
           {games &&
             !isLoading &&

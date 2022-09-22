@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { getAllNews } from '../service/api';
 import Footer from './Footer';
 import NaviBar from './NaviBar';
+import AOS from 'aos';
 
 const AllNews = () => {
   const [news, setNews] = useState([]);
@@ -20,6 +21,7 @@ const AllNews = () => {
   useEffect(() => {
     document.title = 'Game On | NEWS';
     getNewsList();
+    AOS.init();
   }, []);
 
   //TODO: Spacing (Footer)
@@ -27,7 +29,11 @@ const AllNews = () => {
     <div className='bg-[#291D24]'>
       <NaviBar title='News' />
       <div className='container mx-auto px-5 pb-40'>
-        <h5 className='halant text-[#DC3D4B] underline text-5xl text-center lg:text-start font-bold text-white my-10'>
+        <h5
+          data-aos='fade-right'
+          data-aos-duration='1000'
+          className='halant text-[#DC3D4B] underline text-5xl text-center lg:text-start font-bold text-white my-10'
+        >
           LATEST NEWS
         </h5>
         {isLoading && (
@@ -46,6 +52,8 @@ const AllNews = () => {
               const { title, image, date, description, link } = news;
               return (
                 <div
+                  data-aos='fade-up'
+                  data-aos-duration='1000'
                   className='flex flex-col lg:flex-row shadow-lg w-[100%] lg:min-h-[250px]'
                   key={index}
                 >

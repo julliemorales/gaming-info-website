@@ -5,6 +5,7 @@ import Footer from './Footer';
 import NaviBar from './NaviBar';
 import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
+import AOS from 'aos';
 
 const AllGames = () => {
   const [games, setGames] = useState([]);
@@ -22,6 +23,7 @@ const AllGames = () => {
 
   useEffect(() => {
     document.title = 'Game On | GAMES';
+    AOS.init();
     const getGamesList = async () => {
       setIsLoading(true);
       setTimeout(async () => {
@@ -37,7 +39,11 @@ const AllGames = () => {
     <div className='bg-[#291D24]'>
       <NaviBar title='Games' />
       <div className='container mx-auto px-5 pb-40'>
-        <div className='flex flex-col md:flex-row justify-between items-center pb-10'>
+        <div
+          data-aos='fade-right'
+          data-aos-duration='1000'
+          className='flex flex-col md:flex-row justify-between items-center pb-10'
+        >
           <h1 className='halant text-center md:text-start text-3xl md:text-4xl lg:text-5xl font-bold text-white my-10'>
             EXPLORE THE BEST{' '}
             <span className='block'>
@@ -63,7 +69,7 @@ const AllGames = () => {
             games.map((game, index) => {
               const { title, thumbnail, genre, release_date } = game;
               return (
-                <div className='' key={index}>
+                <div data-aos='fade-up' data-aos-duration='1000' key={index}>
                   <div className='bg-[#201B1B] rounded-lg'>
                     <Link to={`/games/${game.id}`}>
                       <img

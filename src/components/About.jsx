@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import NaviBar from './NaviBar';
 import { useEffect } from 'react';
+import Contact from './Contact';
+import Aos from 'aos';
 
 const About = () => {
   useEffect(() => {
     document.title = 'Game On | ABOUT';
+    Aos.init();
   }, []);
 
   return (
@@ -14,7 +17,7 @@ const About = () => {
       <section className='text-white body-font bg-[#291D24]'>
         <div className='container px-5 py-24 mx-auto'>
           <div className='flex flex-col text-center w-full mb-20'>
-            <h1 className='text-2xl font-medium nunito mb-4 text-white tracking-widest'>
+            <h1 className='text-5xl font-medium nunito mb-4 text-white tracking-widest'>
               OUR TEAM
             </h1>
             <p className='lg:w-2/3 mx-auto leading-relaxed text-base nunito'>
@@ -23,7 +26,11 @@ const About = () => {
               haven't heard of them.
             </p>
           </div>
-          <div className='flex flex-wrap -m-4'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='1000'
+            className='flex flex-wrap -m-4'
+          >
             <div className='p-4 lg:w-1/2'>
               <div className='h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left'>
                 <img
@@ -243,8 +250,8 @@ const About = () => {
             </div>
           </div>
         </div>
+        <Contact data-aos='flip-left' data-aos-duration='1000' />
       </section>
-
       <Footer title='About' />
     </div>
   );

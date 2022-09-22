@@ -8,7 +8,9 @@ const Footer = (props) => {
     <footer className='bg-gray-200 text-center lg:text-left'>
       <div className='text-gray-700 text-center p-4 bg-[#1E1E1E] flex justify-center flex-col'>
         <div className='flex justify-center'>
-          <img className='h-20' src='/img/logo.svg' alt='logo'></img>
+          <Link to='/'>
+            <img className='h-20' src='/img/logo.svg' alt='logo'></img>
+          </Link>
         </div>
         <div className='mt-8'>
           <ul className='halant text-xl flex flex-col justify-center md:flex-row'>

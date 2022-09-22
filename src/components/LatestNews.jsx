@@ -2,6 +2,7 @@ import { SpinnerDotted } from 'spinners-react';
 import { useState, useEffect } from 'react';
 import { getAllNews } from '../service/api';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
 
 const AllNews = () => {
   const [news, setNews] = useState([]);
@@ -18,12 +19,17 @@ const AllNews = () => {
 
   useEffect(() => {
     getNewsList();
+    AOS.init();
   }, []);
 
   return (
     <div className='bg-[#261F1F]'>
       <div className='container mx-auto px-5'>
-        <h5 className=' halant text-6xl font-bold text-center text-white my-20 underline'>
+        <h5
+          data-aos='fade-up'
+          data-aos-duration='800'
+          className=' halant text-6xl font-bold text-center text-white my-20 underline pt-10'
+        >
           LATEST NEWS
         </h5>
         {isLoading && (
@@ -39,6 +45,8 @@ const AllNews = () => {
 
               return (
                 <div
+                  data-aos={`fade-${index % 2 !== 0 ? 'right' : 'left'}`}
+                  data-aos-duration='1000'
                   className={`flex flex-col lg:flex-row shadow-lg w-[100%] py-5 lg:min-h-[250px]
 				      ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
                   key={index}

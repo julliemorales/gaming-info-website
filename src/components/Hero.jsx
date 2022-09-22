@@ -5,16 +5,22 @@ import NaviBar from './NaviBar';
 import { Link } from 'react-router-dom';
 import LatestNews from './LatestNews';
 import { useEffect } from 'react';
+import AOS from 'aos';
 
 const Hero = () => {
   useEffect(() => {
     document.title = 'Game On | HOME';
+    AOS.init();
   }, []);
   return (
     <div>
       <NaviBar title='Home' />
       <div className='hero-bg bg-cover bg-opacity-50 h-[calc(100vh-210px)] flex flex-col justify-center items-center'>
-        <div className='ml-16 md:-ml-20 lg:-ml-80'>
+        <div
+          data-aos='fade-up'
+          data-aos-duration='800'
+          className='ml-16 md:-ml-20 lg:-ml-80'
+        >
           <div className='flex flex-col'>
             <p className='text-2xl md:text-3xl lg:text-4xl text-[#DC3D4B] nunito'>
               Welcome Gamer
