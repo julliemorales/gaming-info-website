@@ -25,7 +25,7 @@ const AllNews = () => {
 		<div className='bg-[#291D24]'>
 			<NaviBar title='News' />
 			<div className='container mx-auto'>
-				<h5 className='halant text-5xl text-left text-white my-10'>LATEST NEWS</h5>
+				<h5 className='halant text-5xl text-left font-bold text-white my-10'>LATEST NEWS</h5>
 				{isLoading && (
 					<div className='mx-auto'>
 						<SpinnerDotted size='20%' color='#DC3D4B' className='mx-auto mb-10' />
