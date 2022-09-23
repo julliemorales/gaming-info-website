@@ -40,7 +40,13 @@ const AllNews = () => {
 							const { title, image, date, description, link } = news;
 
 							return (
-								<div data-aos={`fade-${index % 2 !== 0 ? 'right' : 'left'}`} data-aos-duration='1000' className={`flex flex-col lg:flex-row shadow-lg w-[100%] py-5 lg:min-h-[250px]`} key={index}>
+								<div
+									data-aos={`fade-${index % 2 !== 0 ? 'right' : 'left'}`}
+									data-aos-duration='1000'
+									className={`flex flex-col lg:flex-row shadow-lg w-[100%] py-5 lg:min-h-[250px]
+				      ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+									key={index}
+								>
 									<div className='lg:w-2/5 lg:flex lg:items-center'>
 										<img className='mx-auto' src={image} alt={title} />
 									</div>

@@ -13,7 +13,6 @@ const NaviBar = (props) => {
 							<img className='h-16 md:h-22' src='/img/logo.svg' alt='logo'></img>
 						</Link>
 						<div className='md:hidden'>
-							{/* //* ASK THIS */}
 							<button className='p-2 text-gray-700 rounded-md outline-none focus:border-red-500 focus:border' onClick={() => setNavbar(!navbar)}>
 								{navbar ? (
 									<svg xmlns='http://www.w3.org/2000/svg' className='w-6 h-6' viewBox='0 0 20 20' fill='currentColor'>
