@@ -250,7 +250,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <Contact data-aos='flip-left' data-aos-duration='1000' />
+        <Contact />
       </section>
       <Footer title='About' />
     </div>

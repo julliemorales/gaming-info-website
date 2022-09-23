@@ -39,11 +39,13 @@ const AllGames = () => {
               return (
                 <div className='xl:w-1/4 md:w-1/2 p-4' key={index}>
                   <div className='bg-[#201B1B] rounded-lg'>
-                    <img
-                      className='h-40 w-full object-cover object-center mb-6'
-                      src={game.thumbnail}
-                      alt='content'
-                    ></img>
+                    <Link to={`/games/${game.id}`}>
+                      <img
+                        className='h-40 w-full object-cover object-center mb-6'
+                        src={game.thumbnail}
+                        alt='content'
+                      ></img>
+                    </Link>
                     <div className='px-6 py-5'>
                       <h3 className='halant text-white text-xl font-semibold'>
                         {game.title}
